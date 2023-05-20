@@ -1,4 +1,3 @@
-// tomorrow rcb has to win ** 
 #include <stdio.h>
 int main()
 {
@@ -32,6 +31,6 @@ int main()
    
 }
 
-// rcb won by 18 runs
+// RED HAT 
 
 
