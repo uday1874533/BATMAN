@@ -1,34 +1,34 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int n,i,c;
+    int n,x=0;
     scanf("%d",&n);
     while(n!=1)
     {
-        if(n%2==0)
-        {
-            n=n/2;
-        }
-        else if(n%3==0)
-        {
-            n=n/3;
-        }
-        else if(n%5==0)
-        {
-            n=n/5;
-        }
-        else
-        {
-            c=1;
-            break;
-        }
-    }
-    if(c==1)
-    {
-        printf("Not Ugly Number");
-    }
-    else
-    {
-        printf("Ugly Number");
-    }
+    	if(n%5==0)
+    	{
+    		n/=5;
+		}
+		else if (n%3==0)
+		{
+			n/=3;
+		}
+		else if (n%2==0)
+		{
+			n/=2;
+		}
+		else
+    	{
+        	printf("Not Ugly Number
+");
+        	x=1;
+        	break;
+    	}
+	}
+	if(x==0)
+	{
+		printf("Ugly Number
+");
+	}
 }
+// 3 members ki petta adi sneham antey ento tels a ani
