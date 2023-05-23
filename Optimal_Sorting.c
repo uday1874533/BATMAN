@@ -1,40 +1,40 @@
-#include <stdio.h>
-int main ( )
+#include<stdio.h>
+int main()
 {
-    int t;
+    int t,k;
     scanf("%d",&t);
-    while(t--)
+    for(k=0;k<t;k++)
     {
-        int n,i,j;
-        scanf ("%d",&n);
-        int a[100],t,c=0,s;
-        for(i=0;i<n;i++)
+        int a;
+        scanf("%d",&a);
+        int arr[a];
+        for(int i=0;i<a;i++)
+        scanf("%d",&arr[i]);
+    
+    int x=0,s=0,c=0;
+    for(int i=0;i<a;i++)
+    {
+        for(int j=i+1;j<a;j++)
         {
-           scanf("%d",&a[i]);
-        }
-        for(i=0;i<n;i++)
-        {
-            for(j=i+1;j<n;j++)
+            if(arr[i]>arr[j])
             {
-                if(a[i]>a[j])
-                {
-                 t=a[i];
-                a[i]=a[j];
-                a[j]=t;
-                c++;   
-                }
+                x=arr[i];
+                arr[i]=arr[j];
+                arr[j]=x;
+                c++;
             }
         }
-        if(c==0)
-        {
-            printf("0
-") ;
-        }
-        else
-        {
-            s=a[n-1]-a[0];
-            printf("%d
+    }
+    if(c==0)
+    {
+        printf("0
+");
+    }
+    else
+    {
+        s=arr[a-1]-arr[0];
+        printf("%d
 ",s);
-        }
+    }
     }
 }
