@@ -1,16 +1,27 @@
-#include<stdio.h>
+// GT VS CSK    QUALIFER 1
+
+#include <stdio.h>
 int main()
 {
-    int n,max=0,x;
+    int n;
     scanf("%d",&n);
-    while(n!=0)
+    int l=0;
+    while(n>0)
     {
-        x=n%10;
-        if(max<x)
-        {
-            max=x;
-        }
-        n=n/10;
-    }
-    printf("%d",max);
-    }
+    	int r=n%10;
+    	if(r>l)
+    	{
+    		l=r;
+		}
+		n=n/10;
+	}
+	printf("%d",l);
+}
+
+
+
+
+
+
+
+
