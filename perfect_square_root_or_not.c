@@ -1,18 +1,20 @@
 #include<stdio.h>
-#include<math.h>
-    int main()
+
+int main()
+{
+    int n,k=0;
+    scanf("%d",&n);
+    for(int i=1;i<=n/2;i++)
     {
-        int n,s,r;
-        scanf("%d",&n);
-        s=sqrt(n);
-        r=s*s;
-        if(r==n)
+        if(n%i==0&&n/i==i)
         {
             printf("True");
+            k++;
+            break;
         }
-        else
-        {
-            printf("False");
-        }
-        }
-    
+    }
+    if(k==0)
+    {
+        printf("False");
+    }
+}
