@@ -1,60 +1,47 @@
-#include<stdio.h>
-void fun(int a)
-{
-    int left=0,right=0,c=0,x,y,i,j;
-    for(int i=a;left==0;i--)
-    { 
-        c=0;
-        for(int j=1;j<=i/2;j++)
-        {
-            if(i%j==0)
-            {
-                c++;
-            }
-        }
-        if(c==1)
-        {
-            left=i;
-            x=a-left;
-            break;
-        }
-    }
-    for(int i=a;right==0;i++)
-    {
-        c=0;
-        for(int j=1;j<=i/2;j++)
-        {
-            if(i%j==0)
-            {
-                c++;
-            }
-        }
-        if(c==1)
-        {
-            right=i;
-            y=right-a;
-            break;
-        }
-    }
-    if(y>x||y==x)
-    {
-        printf("%d
-",left);
-    }
-    else if(y<x)
-    {
-        printf("%d
-",right);
-    }
-}
+#include <stdio.h>
 int main()
 {
-    int t;
-    scanf("%d",&t);
-    while(t--)
-    {
-        int n;
-        scanf("%d",&n);
-       fun(n);
-    }
+	int m,j;
+	scanf("%d",&m);
+	for(j=1;j<=m;j++)
+	{
+		int n;
+		scanf("%d",&n);
+		int pp=n;
+		while(1)
+		{
+			int fc=0;
+			int i;
+			for(i=1;i<=pp;i++)
+			{
+				if(pp%i==0)
+				{
+					fc++;
+				} 
+			}
+			if(fc==2)
+			{
+				break;
+			}
+			pp--;
+		}
+		int np=n;
+		while(1)
+		{
+			int fc=0;
+			int i;
+			for(i=1;i<=np;i++)
+			{
+				if(np%i==0) fc++;
+			}
+			if(fc==2)
+			{
+				break;
+			}
+			np++;
+		}
+		int res=n-pp<=np-n ? pp:np;
+		printf("%d
+",res);
+	}
 }
