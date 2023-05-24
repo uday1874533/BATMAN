@@ -1,62 +1,27 @@
-#include<stdio.h>
-
-int dc(int n)
-{
-    int r,k=0;
-    while(n>0)
-    {
-        r=n%10;
-        k++;
-        n=n/10;
-    }
-    return k;
-}
-
-int check(int n,int m)
-{
-    int k=0,r;
-    while(m>0)
-    {
-        r=m%10;
-        if(n==r)
-        {
-            k++;
-        }
-        m=m/10;
-    }
-    if(k==1)
-    {
-        return 0;
-    }
-    else
-    {
-        return 1;
-        
-    }
-}
+#include <stdio.h>
 int main()
 {
-    int n,r;
-    scanf("%d",&n);
-    int m=n,k=0;
-    while(n>0)
-    {
-        r=n%10;
-        if(check(r,m))
-        {
-            k++;
-            break;
-            
-        }
-        n=n/10;
-        
-    }
-    if(k==0)
-    {
-        printf("Unique Number");
-    }
-    else
-    {
-        printf("Not Unique Number");
-    }
+	int n,i,digit;
+	static int arr[10];
+	scanf("%d",&n);
+	while(n>0)
+	{
+		digit=n%10;
+		arr[digit]++;
+		n=n/10;
+	}
+	for(i=0;i<10;i++)
+	{
+		if(arr[i]>1)
+		{
+			printf("Not Unique Number");
+			break;
+		}
+	}
+	if(i==10)
+	{
+		printf("Unique Number");
+	}
+	return 0;
 }
+
