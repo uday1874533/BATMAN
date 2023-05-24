@@ -1,44 +1,37 @@
-#include <stdio.h>
-int main ( ) 
-{
-    int n ;
-    scanf ( "%d" , &n ) ;
-    int a [ n ] ;
-    for ( int i = 0 ; i < n ; i++ )
-    {
-        scanf ( "%d" , &a [ i ] ) ;
+#include<stdio.h>
+int main(){
+    int a;
+    scanf("%d",&a);
+    int arr[a],i,j,k=0,l=1;
+    int v=0,c=0;
+    for (i=0; i<a; i++){
+        scanf("%d",&arr[i]);
     }
-    int t = a [ 0 ] , c = 1 ;
-    for ( int i = 1 ; i < n ; i++ )
-    {
-        if ( a [ i ] == t ) 
-        {
-            c++ ;
+    k=arr[0];
+    for (i=1; i<a; i++){
+        if (arr[i]==k){
+            l++;
         }
     }
-    if ( c == n )
-    {
-        printf  ( "0" ) ;
+    if (l==a){
+        printf("%d",0);
     }
-    else
-    {
-        int d , p = 0 ;
-        for ( int i = 0 ; i < n ; i++ )
-        {
-            d = 0 ;
-            for ( int j = 0 ; j < n ; j++ )
-            {
-                if ( a [ i ] == a [ j ] ) 
-                {
-                    d++ ;
+    else{
+        for (i=0; i<a; i++){
+            c=0;
+            for (j=i; j<a; j++){
+                if (arr[i]==arr[j]){
+                    c++;
+                    if (c>v){
+                        v=c;
+                    }
                 }
             }
-            if ( d > p )
-            {
-               p = d ;
-            }
         }
-        printf ( "%d" , p ) ;
-        
+        printf("%d",v);
     }
+    return 0;
 }
+
+
+// ljyfiyrdb i;y]-9]u vrts /joi 7 fdsaiuiud
