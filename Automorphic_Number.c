@@ -29,5 +29,3 @@ int main()
 		printf("Not an Automorphic Number");
 	}
 }
-
-
