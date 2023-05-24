@@ -1,13 +1,19 @@
-#include <stdio.h>
+#include<stdio.h>
+
 int main()
 {
-    int n,i;
-    scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    int t;
+    scanf("%d",&t);
+    for(int i=1;i<=t;i++)
     {
-        int x,y;
-        scanf("%d%d",&x,&y);
-        printf("%d
-",x+y);
+        int a,b;
+        scanf("%d%d",&a,&b);
+    
+        
+            printf("%d
+",a+b);
+    
+        
+        
     }
 }
