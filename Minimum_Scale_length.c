@@ -1,35 +1,29 @@
+
 #include<stdio.h>
 int main()
 {
-    int n,i,j,c,min;
+    int n,i,hcf;
     scanf("%d",&n);
-    int a[n];
+    int arr[n];
     for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
-    min=a[0];
-    for(i=1;i<n;i++)
+    hcf=arr[0];
+    int j=1;
+    while(j<n)
     {
-        if(min>a[i])
+        if(arr[j]%hcf==0)
         {
-            min=a[i];
+            j++;
+        }
+        else
+        {
+            hcf=arr[j]%hcf;
+            i++;
         }
     }
-    for(j=min;j>=1;j--)
-    {
-        c=0;
-        for(i=0;i<n;i++)
-      {
-          if(a[i]%j==0)
-          {
-              c++;
-          }
-      }
-      if(c==n)
-      {
-          printf("%d",j);
-          break;
-      }
-    }
+    printf("%d",hcf);
+    return 0;
 }
+// today LSG VS MI
