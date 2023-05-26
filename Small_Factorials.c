@@ -1,17 +1,19 @@
 #include<stdio.h>
+
 int main()
 {
     int t;
     scanf("%d",&t);
-    while(t--)
+    for(int i=1;i<=t;i++)
     {
-        int n,i,fact=1;
+        int n;
         scanf("%d",&n);
-        for(i=1;i<=n;i++)
+        int f=1;
+        for(int j=1;j<=n;j++)
         {
-            fact=fact*i;
-       }
-       printf("%d
-",fact);
-     }
-  }
+            f=f*j;
+        }
+        printf("%d
+",f);
+    }
+}
