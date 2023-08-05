@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
     int n,i,sum=0;
@@ -7,15 +7,15 @@ int main()
     {
         if(n%i==0)
         {
-            sum=sum+i;
+            sum+=i;
         }
     }
     if(sum==n)
     {
         printf("True");
     }
-        else
-        {
-            printf("False");
-        }
+    else
+    {
+        printf("False");
     }
+}
