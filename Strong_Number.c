@@ -15,11 +15,16 @@ int main()
             fact=fact*i;
             i++;
         }
-        sum=sum+fact;
-        n=n/10;
-    }
-    if(sum==temp)
+    
+    sum+=fact;
+    n=n/10;
+}
+if(sum==temp)
+{
     printf("The number %d is a strong number",temp);
-    else
+}
+else
+{
     printf("The number %d is not a strong number",temp);
+}
 }
