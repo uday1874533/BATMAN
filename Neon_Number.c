@@ -1,17 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int n,r;
     scanf("%d",&n);
-    int s=0,r,m=n;
-    n=n*n;
-    while(n>0)
+    int sq=n*n,sum=0;
+    while(sq>0)
     {
-        r=n%10;
-        s=s+r;
-        n=n/10;
+        r=sq%10;
+        sum=sum+r;
+        sq=sq/10;
     }
-    if(s==m)
+    if(sum==n)
     {
         printf("Neon Number");
     }
